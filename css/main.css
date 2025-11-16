@@ -125,9 +125,7 @@ html {
     position: relative;
     color: var(--background-color-light);
     margin: 0;
-    border-bottom: 1px var(--background-color-dark-bg);
-
-    /* clip-path: polygon(0 0, 100% 14%, 100% 100%, 0% 100%); */
+    border-bottom: 3px var(--color_black) solid;
 }
 
 .hero_container {
@@ -145,16 +143,21 @@ html {
     margin: 200px 0 0 0;
 }
 
+/*Redundant - DRY [Don't Repeat Yourself]*/
+
 .hero_text h1 {
     padding: 0;
-    /*Redundant - DRY [Don't Repeat Yourself]*/
     margin: 15px 0;
     font-size: 32px;
     text-transform: uppercase;
     font-weight: 400;
 }
 
-.hero_text h1 span {
+.first_text {
+    font-weight: 100;
+}
+
+.second_line {
     font-weight: 900;
     font-size: 37px;
 }
@@ -336,22 +339,27 @@ html {
 }
 
 /* Data-Category Colors Start */
-div[data-category="seafood"], .serp_item h3[data-category="seafood"] {
+div[data-category="seafood"],
+.serp_item h3[data-category="seafood"] {
     border-left: 1px solid var(--category-seafood);
 }
 
-p[data-category="seafood"], span[data-category="seafood"] {
+p[data-category="seafood"],
+span[data-category="seafood"] {
     color: var(--category-seafood);
 }
 
 h3[data-category="seafood"] {
     color: var(--category-seafood);
 }
-div[data-category="chicken"], .serp_item h3[data-category="chicken"] {
+
+div[data-category="chicken"],
+.serp_item h3[data-category="chicken"] {
     border-left: 1px solid var(--category-chicken);
 }
 
-p[data-category="chicken"], span[data-category="chicken"] {
+p[data-category="chicken"],
+span[data-category="chicken"] {
     color: var(--category-chicken);
 }
 
@@ -449,7 +457,7 @@ div[data-category="dessert-section"] {
     color: var(--color_black);
 }
 
-.content_area { 
+.content_area {
     width: var(--width-12col);
     height: fit-content;
     display: grid;
@@ -459,10 +467,12 @@ div[data-category="dessert-section"] {
     box-sizing: border-box;
     margin: 0 auto;
 }
+
 .content_area_img img {
-   object-fit: cover;
-   display: block;
+    object-fit: cover;
+    display: block;
 }
+
 .content_area_headline {
     width: var(--width-12col);
     color: var(--background-color-light);
@@ -664,7 +674,8 @@ div[data-category="dessert-section"] {
         border-bottom: 1px solid var(--color_dark);
         padding: 15px;
     }
-    .search_box_searchpage{
+
+    .search_box_searchpage {
         grid-column: 1 / span 2;
         grid-row: 1;
         margin: 100px 0 30px 0;
@@ -680,8 +691,8 @@ div[data-category="dessert-section"] {
     font-weight: 600;
 }
 
-@media (max-width: 400px){
-    .fullsearch_headline{
+@media (max-width: 400px) {
+    .fullsearch_headline {
         margin: 0;
         padding: 10px 0;
     }
@@ -718,7 +729,7 @@ div[data-category="dessert-section"] {
     height: 20px;
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
     .filter_category_checkbox {
         grid-column: 1 / span 2;
         grid-row: 3;
@@ -726,10 +737,12 @@ div[data-category="dessert-section"] {
         margin: 0;
         width: 370px;
     }
-    .filter_category_checkbox h3{
+
+    .filter_category_checkbox h3 {
         font-size: 20px;
     }
-    .filter_category_checkbox label{
+
+    .filter_category_checkbox label {
         font-size: 14px;
         height: 15px;
         flex-direction: column;
@@ -738,6 +751,7 @@ div[data-category="dessert-section"] {
         align-items: flex-start;
         margin-right: 30px;
     }
+
     .hero-searchpage {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -755,31 +769,38 @@ div[data-category="dessert-section"] {
 .filter_category_checkbox input:checked {
     border: 2px solid var(--primary-color);
 }
+
 .filter_category_checkbox input[type="radio"]#chicken {
     accent-color: var(--category-chicken);
 }
+
 .filter_category_checkbox input[type="radio"]#veg {
     accent-color: var(--category-veg);
 }
+
 .filter_category_checkbox input[type="radio"]#seafood {
     accent-color: var(--category-seafood);
 }
+
 .filter_category_checkbox input[type="radio"]#pasta {
     accent-color: var(--category-pasta);
 }
+
 .filter_category_checkbox input[type="radio"]#dessert {
     accent-color: var(--category-dessert);
 }
+
 .filter_category_checkbox input[type="radio"]#meat {
     accent-color: var(--category-meats);
 }
+
 .filter_category_checkbox input[type="radio"]#snacks {
     accent-color: var(--category-misc);
 }
 
 .serp {
     width: var(--width-full);
-    border-top: 1px solid var(--color_dark);
+    border-top: 1px solid var(--color_black);
     margin: 70px 0 0 0;
 }
 
@@ -835,7 +856,7 @@ div[data-category="dessert-section"] {
     grid-template-rows: auto auto auto;
     gap: var(--grid-gap);
     width: var(--width-12col);
-    height: 100%;   
+    height: 100%;
 }
 
 .recipe_hero_text {
@@ -870,7 +891,9 @@ div[data-category="dessert-section"] {
     margin-top: 67px;
 }
 
-.duration, .calories, .skill_level {
+.duration,
+.calories,
+.skill_level {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -928,7 +951,7 @@ div[data-category="dessert-section"] {
 }
 
 .print {
-        color: var(--color-light);
+    color: var(--color-light);
     background-color: transparent;
     border-radius: 5px;
     font-size: 16px;
@@ -993,6 +1016,64 @@ div[data-category="dessert-section"] {
     margin-left: 15px;
 }
 
-.recipe_instructions_steps li{
+.recipe_instructions_steps li {
     padding-bottom: 26px;
+}
+
+/* About Page */
+
+.header {
+    background-image: url("https://picsum.photos/1200/800");
+    min-height: 600px;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: var(--background-color-light);
+    margin: 0;
+    border-bottom: 3px var(--color_black) solid;
+}
+
+.header_container {
+    width: var(--width-12col);
+    height: 100%;
+    margin: 200px 0 0 0;
+    text-align: left;
+}
+
+.header_container h1 {
+    padding: 0;
+    margin: 15px 0;
+    font-size: 75px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.header_container span {
+    font-weight: 200;
+    color: var(--primary-color);
+}
+
+.about_us {
+    width: var(--width-12col);
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 130px auto;
+    gap: var(--grid-gap);
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.about_us_container {
+    width: 100%;
+    color: var(--background-color-light);
+    height: 45px;
+    border-bottom: 1px solid var(--background-color-light);
+    margin: 70px 0 0 0;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 900;
 }
