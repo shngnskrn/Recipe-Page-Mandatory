@@ -115,8 +115,8 @@ html {
 }
 
 .hero {
-    background-image: url("https://picsum.photos/1200/800");
-    min-height: 600px;
+    background-image: url("../img/top_view_delicious_food_table.png");
+    min-height: 680px;
     height: auto;
     background-size: cover;
     background-position: center center;
@@ -212,6 +212,7 @@ html {
 .todays_recipes_content_block_image img {
     height: 200px;
     width: 100%;
+    object-fit: cover;
     background-size: cover;
     background-position: center;
     border-radius: 5px 5px 0 0;
@@ -410,7 +411,7 @@ div[data-category="dessert-section"] {
 /* Data-Category Colors End */
 
 .image_section {
-    background-image: url("https://picsum.photos/1200/800");
+    background-image: url("../img/female_chef_preparing_dish.png");
     min-height: 600px;
     height: auto;
     background-size: cover;
@@ -422,7 +423,6 @@ div[data-category="dessert-section"] {
     margin: 168px auto 97px auto;
     padding: 0 100px 0 0;
     clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
-
 }
 
 .image_container {
@@ -908,7 +908,15 @@ div[data-category="dessert-section"] {
     margin-right: 10px;
 }
 
-/* image */
+.recipe_hero_container_image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    grid-column: 9 / span 13;
+    grid-row: 1 / span 3;
+    margin-top: 200px;
+    margin-left: 20px;
+}
 
 .recipe_hero_container_ingredients {
     display: grid;
@@ -1020,10 +1028,21 @@ div[data-category="dessert-section"] {
     padding-bottom: 26px;
 }
 
-/* About Page */
+.recipe_instructions_images {
+    height: 264px;
+    width: 272px;
+    display: flex;
+    flex-direction: column;
+    grid-column: 3;
+}
 
+.recipe_instructions_images img {
+    padding-bottom: 30px;
+}
+
+/* About Page */
 .header {
-    background-image: url("https://picsum.photos/1200/800");
+    background-image: url("../img/close_up_person_cooking_about.png");
     min-height: 600px;
     height: auto;
     background-size: cover;
@@ -1052,22 +1071,20 @@ div[data-category="dessert-section"] {
 }
 
 .header_container span {
-    font-weight: 200;
     color: var(--primary-color);
 }
 
 .about_us {
     width: var(--width-12col);
     height: fit-content;
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 130px auto;
-    gap: var(--grid-gap);
+    display: flex;
+    justify-content: center;
     box-sizing: border-box;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
-.about_us_container {
+.about_us_container h1 {
     width: 100%;
     color: var(--background-color-light);
     height: 45px;
@@ -1076,4 +1093,80 @@ div[data-category="dessert-section"] {
     font-size: 37px;
     text-transform: uppercase;
     font-weight: 900;
+}
+
+.about_us_container p {
+    color: var(--color-light);
+    font-size: 16px;
+    line-height: 26px;
+    margin: 30px 0 0 0;
+    text-align: justify;
+}
+
+.mission {
+    width: var(--width-12col);
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.mission h1 {
+    width: 100%;
+    color: var(--background-color-light);
+    height: 45px;
+    border-bottom: 1px solid var(--background-color-light);
+    margin: 70px 0 0 0;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.mission p {
+    color: var(--color-light);
+    font-size: 16px;
+    line-height: 26px;
+    margin: 30px 0 0 0;
+    text-align: justify;
+}
+
+.contact {
+    width: var(--width-12col);
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.contact h1 {
+    width: 100%;
+    color: var(--background-color-light);
+    height: 45px;
+    border-bottom: 1px solid var(--background-color-light);
+    margin: 70px 0 0 0;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.contact p {
+    color: var(--color-light);
+    font-size: 16px;
+    line-height: 26px;
+    margin: 30px 0 0 0;
+    text-align: justify;
+}
+
+.contact_details p {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 26px;
+    margin: 30px 0 0 0;
+    text-align: justify;
 }
