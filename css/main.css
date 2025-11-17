@@ -245,7 +245,7 @@ html {
 .todays_recipes_content_block {
     background-color: var(--background-color-light);
     border-radius: 5px;
-    position: relative;
+    /* position: relative; */
 }
 
 .todays_recipes_content_block_text {
@@ -332,11 +332,14 @@ html {
 }
 
 .category_selection_content {
-    justify-content: space-evenly;
     display: flex;
+    height: fit-content;
+    width: var(--width-12col);
+    justify-content: space-evenly;
     align-items: center;
     background-color: var(--background-color-light);
     border-radius: 5px;
+    text-align: center;
 }
 
 .category_selection_content_block {
@@ -1187,14 +1190,99 @@ div[data-category="dessert-section"] {
 
 /* Mobile Version */
 
-@media (width < 600px) {
+@media (width <= 600px) {
 
     :root {
         --width-12col: 100%;
     }
 
-    .todays_recipes_content {
-        grid-template-columns: repeat(1, 1fr)
+    .todays_recipes, .categories, .content_area, .menu_container, .hero_container, .category_selection, .category_selection_content {
+        width: 100% !important;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
+    .menu_container ul {
+        align-items: center;
+        margin-top: none;
+    }
+
+    .menu_container ul li {
+        margin: 5px 0;
+    }
+
+    .hero_container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .search_box {
+        margin: 0;
+        width: 100%;
+    }
+
+    .todays_recipes_content {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    
+    .todays_recipes_headline {
+        font-size: 30px; 
+        text-align: left;
+    }
+
+    .category_selection_headline {
+        font-size: 30px; 
+        text-align: left;
+    }
+
+    .category_selection_content {
+        display: grid;
+        grid-template-columns: 2fr;
+        gap: 10px;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .category_selection_content_block {
+        margin: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .image_section {
+        margin: 50px 0;
+        padding: 20px;
+        justify-content: center;
+    }
+    
+    .image_container {
+        width: 100%; 
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .content_area_blocks {
+        flex-direction: column; 
+    }
+
+    .content_area_block {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .content_area_text {
+        padding: 30px; 
+    }
+    
+    .content_area_headline {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+    .footer {
+       display: none;
+    }
 }
