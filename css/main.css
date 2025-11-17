@@ -1146,6 +1146,10 @@ div[data-category="dessert-section"] {
         --width-12col: 100%;
     }
 
+    .container {
+        width: 100% !important;
+    }
+
     .todays_recipes,
     .categories,
     .content_area,
